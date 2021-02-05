@@ -30,7 +30,7 @@ To boot the server run `adonis serve`
 
 ## User Installation Instructions
 
-
+Click the link given on the site main page to edit
 
 ## How to Use
 
@@ -43,6 +43,26 @@ The homepage consists of only four buttons:
 3. Add Shows - To add shows to the schedule
 4. Print Tickets - To view and print tickets for particular shows
 
+<<<<<<< HEAD
 
 
 ###### For any questions or to report bugs: vcpticketing@gmail.com
+=======
+## Button 1 - Previous Shows:
+
+Use the drop down menu to search for past shows. YOu will be shown past seating hcarts and can use those to find relevant information.
+
+## Button 2 - Future Shows: 
+
+Add or remove people to upcoming showtimes.
+
+## Button 3 - Add Shows: 
+
+Use the add shows button to add showtimes
+
+## Button 4 - Print Tickets:
+
+Select what show time you want, and what seats are applicable to print out tickets.
+
+## To report a bug users can email vcpticketing@gmail.com
+>>>>>>> 8fb8ecb71bcfb6cc8f9d2ef4b13b8de4ef535ea7
