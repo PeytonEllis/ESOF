@@ -45,13 +45,10 @@ section {
 }
 
 .button {
-<<<<<<< HEAD
   /* background-color: #e7e7e7; */
   /*background-color: #99ffcc -or- rgb(153, 255, 204)*/
-=======
   background-color: #e7e7e7;
   border: none;
->>>>>>> 4b7b3127d93060563e9024b53ad4a7e16b5deebc
   color: black;
   padding: 10px 20px;
   text-align: center;
