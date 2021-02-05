@@ -59,3 +59,4 @@ Use the add shows button to add showtimes
 
 Select what show time you want, and what seats are applicable to print out tickets.
 
+## To report a bug users can email vcpticketing@gmail.com
