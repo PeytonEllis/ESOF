@@ -43,3 +43,6 @@ The homepage consists of only four buttons:
 3. Add Shows - To add shows to the schedule
 4. Print Tickets - To view and print tickets for particular shows
 
+
+
+###### For any questions or to report bugs: vcpticketing@gmail.com
