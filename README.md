@@ -1,31 +1,32 @@
-# Adonis fullstack application
+# AdonisJs Theater Ticketing Web Application
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+This is a web application run on a local server that uses the AdonisJs backend framework and MySQL database tools.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+## Dev Installation Instructions
 
-## Setup
+There are 3 dependencies you will need to have installed on your machine.
 
-Use the adonis command to install the blueprint
+1. [Node.Js](https://nodejs.org/en/download/)
+2. npm
+3. [AdonisJs](https://adonisjs.com/)
+
+Make sure these are installed on your machine before trying to boot the server.
+
+To install AdonisJs run the following command:
 
 ```bash
-adonis new yardstick
+npm i -g @adonisjs/cli
 ```
 
-or manually clone the repo and then run `npm install`.
+Next clone this repo to your local machine with the following command:
 
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+```bash
+git clone https://github.com/PeytonEllis/ESOF.git
 ```
+
+Then run `npm install`.
+
+To boot the server run `adonis serve`
+
+## User Installation Instructions
+
