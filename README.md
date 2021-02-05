@@ -32,7 +32,7 @@ To boot the server run `adonis serve`
 
 
 
-## How to User
+## How to Use
 
 Ease of use is a big factor in the user interface design
 
