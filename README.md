@@ -30,3 +30,15 @@ To boot the server run `adonis serve`
 
 ## User Installation Instructions
 
+
+
+## How to User
+
+Ease of use is a big factor in the user interface design
+
+The homepage consists of only three buttons:
+
+1. Previous Shows - To view the seating arrangements and ticket sales of a past show
+2. Future Shows - To view and edit the seating arrangments of shows that have been scheduled
+3. Add Shows - To add shows to the schedule
+
