@@ -8,8 +8,7 @@ html, body {
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  background-image: url("/splash.png");
-  background-color: #220052;
+  background-color: #6b6b69;
 }
 
 * {
@@ -28,34 +27,38 @@ section {
   position: relative;
 }
 
-section:before {
-  content: "";
-  position: absolute;
-  background: url("/pyramid.png") no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 402px;
-  z-index: -1;
-}
-
 .logo {
-  background: url("/logo.svg") no-repeat;
-  width: 36px;
-  height: 33px;
+  background: url("/vcplogo.jpg") no-repeat;
+  width: 370px;
+  height: 295px;
   background-size: 100%;
   margin-bottom: 35px;
   opacity: 0;
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
 }
 
-.title {
-  background: url("/title.svg") no-repeat;
-  width: 219px;
-  height: 36px;
-  background-size: 100%;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.2s forwards;
+.button {
+  background-color: #e7e7e7;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
+
+.prevbutton {
+  position: absolute;
+  left: 100px;
+  top: 448px;
+}
+
+.addbutton {
+  position: absolute;
+  left: -500;
+  top: 448px;
+}
+
 
 .subtitle {
   margin-top: 25px;
