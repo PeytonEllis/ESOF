@@ -17,8 +17,6 @@ body {
 }
 
 .button_panel {
-  display: inline-block;
-  color: rgb(153, 255, 204);
   padding: 50px;
   height: 200px;
   width: 33%;
@@ -46,8 +44,7 @@ section {
 
 .button {
   /* background-color: #e7e7e7; */
-  /*background-color: #99ffcc -or- rgb(153, 255, 204)*/
-  background-color: #e7e7e7;
+  background-color: rgb(153, 255, 204);
   border: none;
   color: black;
   padding: 10px 20px;
@@ -79,7 +76,7 @@ section {
 
 .subtitle {
   margin-top: 25px;
-  color: #BDB3CB;
+  color: white;
   font-size: 17px;
   text-align: center;
   letter-spacing: 0.5;
