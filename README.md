@@ -44,3 +44,4 @@ The homepage consists of only four buttons:
 4. Print Tickets - To view and print tickets for particular shows
 
 ##### To report a bug users can email vcpticketing@gmail.com
+
