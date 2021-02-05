@@ -16,13 +16,20 @@ body {
   padding: 0;
 }
 
+.button_panel {
+  display: inline-block;
+  color: rgb(153, 255, 204);
+  padding: 50px;
+  height: 200px;
+  width: 33%;
+}
+
 section {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 536px;
   margin: auto;
   position: relative;
 }
@@ -38,16 +45,18 @@ section {
 }
 
 .button {
-  background-color: #e7e7e7;
+  /* background-color: #e7e7e7; */
+  /*background-color: #99ffcc -or- rgb(153, 255, 204)*/
   color: black;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  padding: 5px;
 }
 
-.prevbutton {
+/* .prevbutton {
   position: absolute;
   left: 100px;
   top: 448px;
@@ -57,7 +66,7 @@ section {
   position: absolute;
   left: -500;
   top: 448px;
-}
+} */
 
 
 .subtitle {
