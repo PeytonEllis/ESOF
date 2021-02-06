@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Verdana';
   font-weight: 300;
   background-color: #6b6b69;
 }
 
 .button_panel {
   padding: 45px;
-  margin:auto;
-  width:33%;
+  margin: auto;
+  width: 33%;
   border-color: black;
 }
 
 .container {
-  width:80%;
-  margin:auto;
+  width: 80%;
+  margin: auto;
+  padding: 15px;
 }
 
 .logo {
   background: url("/vcplogo.jpg") no-repeat;
-  width: 370px;
+  width: 370px; 
   height: 295px;
-  background-size: 100%;
-  margin:auto;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  opacity: 0;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-align: center;
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
 }
 
@@ -45,7 +45,8 @@ body {
 }
 
 .subtitle {
-  margin-top: 25px;
+  margin-top: auto;
+  padding: 15px;
   color: white;
   font-size: 17px;
   text-align: center;
