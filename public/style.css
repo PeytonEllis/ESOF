@@ -1,35 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   background-color: #6b6b69;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .button_panel {
   padding: 50px;
-  height: 200px;
-  width: 33%;
+  margin:auto;
+  width:33%;
+  border-color: black;
 }
 
-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  position: relative;
+.container {
+  width:80%;
+  margin:auto;
 }
 
 .logo {
@@ -37,16 +23,18 @@ section {
   width: 370px;
   height: 295px;
   background-size: 100%;
+  margin:auto;
+  margin-top: 35px;
   margin-bottom: 35px;
   opacity: 0;
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
 }
 
 .button {
-  /* background-color: #e7e7e7; */
-  background-color: rgb(153, 255, 204);
+  margin:auto;
+  background-color: rgb(53, 54, 56);
   border: none;
-  color: black;
+  color: #E5D8C5;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -55,24 +43,6 @@ section {
   cursor: pointer;
   padding: 5px;
 }
-
-/* .prevbutton {
-  position: absolute;
-  left: 50px;
-  top: 448px;
-}
-
-.futbutton {
-  position: absolute;
-  top: 448px;
-}
-
-.addbutton {
-  position: absolute;
-  left: 350px;
-  top: 448px;
-} */
-
 
 .subtitle {
   margin-top: 25px;
@@ -83,7 +53,6 @@ section {
   opacity: 0;
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.5s forwards;
 }
-
 
 a {
   color: inherit;
