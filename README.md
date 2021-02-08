@@ -37,7 +37,9 @@ A list of bug will be posted from the email to the github when bugs are reported
 
 ## User Installation Instructions
 
-Click the link given on the site main page to edit
+For demo purposes visit: [esof423.cs.montana.edu:4001]
+
+Must be on MSU network & server must be running
 
 ## How to Use
 
