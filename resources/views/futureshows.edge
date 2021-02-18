@@ -1,0 +1,25 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Future Shows</title>
+  {{ style('style') }}
+</head>
+
+<div class="future_shows">
+      <form action="{{ route('SeatingChartController.create') }}" method="POST">
+        {{ csrfField() }}
+
+        <label for="Name">Name</label>
+        <input type="text" name="Name">
+
+        <label for="Phone_Number">Phone Number</label>
+        <input type="text" name="Phone_Number">
+
+        <label for="Seat_type">Seat Type</label>
+        <input type="text" name="Seat_type">
+
+        <label for="Seats_rsv">Seat Reserved</label>
+        <input type="text" name="Seats_rsv">
+
+        <button type="submit">Enter</button>
+      </form>
+</div>

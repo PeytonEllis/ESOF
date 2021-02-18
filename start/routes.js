@@ -17,3 +17,6 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.on('/future-shows').render('futureshows')
+Route.post('/future-shows', 'SeatingChartController.create')

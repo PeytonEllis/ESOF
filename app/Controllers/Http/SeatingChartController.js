@@ -7,6 +7,9 @@
 /**
  * Resourceful controller for interacting with seatingcharts
  */
+
+const SeatingChart = use('App/Models/SeatingChart')
+
 class SeatingChartController {
   /**
    * Show a list of all seatingcharts.
@@ -30,6 +33,11 @@ class SeatingChartController {
    * @param {View} ctx.view
    */
   async create ({ request, response, view }) {
+
+    const data = await SeatingChart.create(request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv']))
+
+    // save and get instance back
+    return response.redirect('future-shows')
   }
 
   /**
