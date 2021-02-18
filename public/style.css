@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:300'); */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Verdana';
@@ -6,7 +10,16 @@ body {
   background-color: #6b6b69;
 }
 
-.button_panel {
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0.83rem 0;
+}
+
+.button-panel {
   padding: 45px;
   margin: auto;
   width: 33%;
@@ -27,11 +40,12 @@ body {
   margin-bottom: 15px;
   margin-top: 10px;
   text-align: center;
+  opacity: 0;
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
 }
 
 .button {
-  margin:auto;
+  margin: auto;
   background-color: rgb(53, 54, 56);
   border: none;
   color: #E5D8C5;
@@ -53,15 +67,6 @@ body {
   letter-spacing: 0.5;
   opacity: 0;
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.5s forwards;
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-p {
-  margin: 0.83rem 0;
 }
 
 @keyframes slideUp {
