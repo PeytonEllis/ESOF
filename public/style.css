@@ -19,6 +19,20 @@ p {
   margin: 0.83rem 0;
 }
 
+.nav {
+  position: relative;
+  background-color: #E5D8C5;
+}
+
+.nav li {
+  display: inline;
+  float: left;
+}
+
+.nav a {
+  padding: 10px;
+}
+
 .button-panel {
   padding: 45px;
   margin: auto;
