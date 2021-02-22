@@ -80,9 +80,21 @@ p {
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.5s forwards;
 }
 
-/* .future_shows {
-  display: block;
-} */
+.show_input {
+  height: 20px;
+  width: 500px;
+  margin: auto;
+  padding: 10px;
+  font-size: 25;
+}
+
+.future_shows {
+  height: 25%;
+  width: 50%;
+  margin: auto;
+  background-color: E5D8C5; 
+  padding: 10px
+}
 
 @keyframes slideUp {
   0% {
