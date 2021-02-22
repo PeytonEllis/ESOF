@@ -8,17 +8,25 @@
       <form action="{{ route('SeatingChartController.create') }}" method="POST">
         {{ csrfField() }}
 
-        <label for="Name">Name</label>
-        <input type="text" name="Name">
+        <div class = show_input>
+          <label for="Name">Name:</label>
+          <input type="text" name="Name">
+        </div>
 
-        <label for="Phone_Number">Phone Number</label>
-        <input type="text" name="Phone_Number">
+        <div class = show_input>
+          <label for="Phone_Number">Phone Number:</label>
+          <input type="text" name="Phone_Number">
+        </div>
 
-        <label for="Seat_type">Seat Type</label>
-        <input type="text" name="Seat_type">
+        <div class = show_input>
+          <label for="Seat_type">Seat Type:</label>
+          <input type="text" name="Seat_type">
+        </div>
 
-        <label for="Seats_rsv">Seat Reserved</label>
-        <input type="text" name="Seats_rsv">
+        <div class = show_input>
+          <label for="Seats_rsv">Seat Reserved:</label>
+          <input type="text" name="Seats_rsv">
+        </div>
 
         <button type="submit">Enter</button>
       </form>
