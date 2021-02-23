@@ -7,7 +7,7 @@ This is a web application run on a local server that uses the AdonisJs backend f
 There are 3 dependencies you will need to have installed on your machine.
 
 1. [Node.Js](https://nodejs.org/en/download/)
-2. npm
+2. [npm (Node Package Manager)](https://www.npmjs.com/)
 3. [AdonisJs](https://adonisjs.com/)
 
 Make sure these are installed on your machine before trying to boot the server.
