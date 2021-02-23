@@ -12,6 +12,12 @@ There are 3 dependencies you will need to have installed on your machine.
 
 Make sure these are installed on your machine before trying to boot the server.
 
+Go to the following link to download node.js; https://nodejs.org/en/download/
+
+To install npm run the following command in the desired folder:
+```bash
+npm install
+```
 To install AdonisJs run the following command:
 
 ```bash
@@ -24,10 +30,11 @@ Next clone this repo to your local machine with the following command:
 git clone https://github.com/PeytonEllis/ESOF.git
 ```
 
-Then run `npm install`.
+To boot the server run the folling command from the ESOF subdirectory
 
-To boot the server run `adonis serve`
-
+```bash
+`adonis serve
+```
 Build and test is ran whenever the software is started.
 
 New versions are available when pushed to github.
