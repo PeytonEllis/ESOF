@@ -33,7 +33,7 @@ git clone https://github.com/PeytonEllis/ESOF.git
 To boot the server run the folling command from the ESOF subdirectory
 
 ```bash
-`adonis serve
+adonis serve
 ```
 Build and test is ran whenever the software is started.
 
