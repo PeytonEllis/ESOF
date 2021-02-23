@@ -1,35 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Future Shows</title>
-  {{ style('style') }}
+    <meta charset="UTF-8" />
+    <title>Future Shows</title>
+    {{ style('style') }}
 </head>
 
-<div class="future_shows">
-      <form action="{{ route('SeatingChartController.create') }}" method="POST">
-        {{ csrfField() }}
+<body>
+    <div class="container">
+        <div class="future_shows">
+            <form action="{{ route('SeatingChartController.create') }}" method="POST">
+                {{ csrfField() }}
 
-        <div class = show_input>
-          <label for="Name">Name:</label>
-          <input type="text" name="Name">
-        </div>
+                <div class="show_input">
+                    <div class="left">
+                        <label for="Name">Name:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="Name">
+                    </div>
+                </div>
 
-        <div class = show_input>
-          <label for="Phone_Number">Phone Number:</label>
-          <input type="text" name="Phone_Number">
-        </div>
+                <div class="show_input">
+                    <div class="left">
+                        <label for="Phone_Number">Phone Number:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="Phone_Number">
+                    </div>
+                </div>
 
-        <div class = show_input>
-          <label for="Seat_type">Seat Type:</label>
-          <input type="text" name="Seat_type">
-        </div>
+                <div class="show_input">
+                    <div class="left">
+                        <label for="Seat_type">Seat Type:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="Seat_type">
+                    </div>
+                </div>
 
-        <div class = show_input>
-          <label for="Seats_rsv">Seat Reserved:</label>
-          <input type="text" name="Seats_rsv">
-        </div>
+                <div class="show_input">
+                    <div class="left">
+                        <label for="Seats_rsv">Seat Reserved:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="Seats_rsv">
+                    </div>
+                </div>
 
-        <div class = show_input>
-          <button type="submit">Enter</button>
+                <div id="submit_container">
+                    <button type="submit">Enter</button>
+                </div>
+            </form>
         </div>
-      </form>
-</div>
+    </div>
+</body>
+
+</html>
