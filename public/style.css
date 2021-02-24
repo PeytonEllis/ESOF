@@ -13,6 +13,7 @@ a {
 body {
     font-family: 'Verdana';
     background-color: #323639;
+    padding: 10px;
 }
 
 form {
