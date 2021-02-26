@@ -1,35 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+@layout('layouts.main')
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Virginia City Players</title>
-    {{ style('reset') }}
-    {{ style('style') }}
-</head>
+@section('extracss')
+@endsection
 
-<body>
-    <div class="container">
-        <div class="logo">
-            <!-- TODO -->
-        </div>
+@section('title')
+    Welcome
+@endsection
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="/previous-shows">Previous Shows</a></li>
-                <li><a href="/future-shows">Future Shows</a></li>
-                <li><a href="/add-show">Add Shows</a></li>
-                <li><a href="/print-tickets">Print Tickets</a></li>
-            </ul>
-        </nav>
+@section('content')
+<div class="container">
+    <div class="logo">
+        <!-- TODO -->
+    </div>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="/previous-shows">Previous Shows</a></li>
+            <li><a href="/future-shows">Future Shows</a></li>
+            <li><a href="/add-show">Add Shows</a></li>
+            <li><a href="/print-tickets">Print Tickets</a></li>
+        </ul>
+    </nav>
 
-        <div class="subtitle">
+    <div class="subtitle">
             <p>To view past shows click "Previous Shows"</p>
             <p>To view future scheduled shows click "Future Shows"</p>
             <p>To add a new show to the schedule click "Add Shows"</p>
             <p>To print the tickets for a particular show click "Print Tickets"</P>
-        </div>
     </div>
-</body>
-
-</html>
+</div>
+@endsection

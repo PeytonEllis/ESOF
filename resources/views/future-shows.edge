@@ -1,68 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+@layout('layouts.main')
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Future Shows</title>
-    {{ style('reset') }}
-    {{ style('style') }}
-</head>
+@section('extracss')
+@endsection
 
-<body>
-    <div class="container">
-        <div class="future_shows">
-            <form action="{{ route('SeatingChartController.create') }}" method="POST">
-                {{ csrfField() }}
+@section('title')
+Future Shows
+@endsection
 
-                <div class="show_input">
-                    <div class="left">
-                        <label for="Name">Name:</label>
-                    </div>
-                    <div class="right">
-                        <input type="text" id="Name">
-                    </div>
+@section('content')
+<div class="container">
+    <div class="future_shows">
+        <form action="{{ route('SeatingChartController.create') }}" method="POST">
+            {{ csrfField() }}
+
+            <div class="show_input">
+                <div class="left">
+                    <label for="Name">Name:</label>
                 </div>
-
-                <div class="show_input">
-                    <div class="left">
-                        <label for="Phone_Number">Phone Number:</label>
-                    </div>
-                    <div class="right">
-                        <input type="text" id="Phone_Number">
-                    </div>
+                <div class="right">
+                    <input type="text" id="Name">
                 </div>
+            </div>
 
-                <div class="show_input">
-                    <div class="left">
-                        <label for="Seat_type">Seat Type:</label>
-                    </div>
-                    <div class="right">
-                        <input type="text" id="Seat_type">
-                    </div>
+            <div class="show_input">
+                <div class="left">
+                    <label for="Phone_Number">Phone Number:</label>
                 </div>
-
-                <div class="show_input">
-                    <div class="left">
-                        <label for="Seats_rsv">Seat Reserved:</label>
-                    </div>
-                    <div class="right">
-                        <input type="text" id="Seats_rsv">
-                    </div>
+                <div class="right">
+                    <input type="text" id="Phone_Number">
                 </div>
+            </div>
 
-                <div id="submit_container">
-                    <button type="submit">Enter</button>
+            <div class="show_input">
+                <div class="left">
+                    <label for="Seat_type">Seat Type:</label>
                 </div>
+                <div class="right">
+                    <input type="text" id="Seat_type">
+                </div>
+            </div>
 
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                    </ul>
-                </nav>
+            <div class="show_input">
+                <div class="left">
+                    <label for="Seats_rsv">Seat Reserved:</label>
+                </div>
+                <div class="right">
+                    <input type="text" id="Seats_rsv">
+                </div>
+            </div>
 
-            </form>
-        </div>
+            <div id="submit_container">
+                <button type="submit">Enter</button>
+            </div>
+
+        </form>
     </div>
-</body>
-
-</html>
+</div>
+@endsection

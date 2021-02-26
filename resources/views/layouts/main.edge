@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ style('reset') }}
+    {{ style('style') }}
+
+    @!section('extracss')
+
+    <title> 
+        @!section('title')
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            @!section('title')
+        </h1>
+        <br><br><br><br>
+
+        @!section('content')
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>
