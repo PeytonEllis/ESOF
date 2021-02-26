@@ -1,7 +1,3 @@
-#h1 {
-    color: #D6D6D7;
-}
-
 #submit_container {
     height: 28px;
     width: 48.25px;
@@ -22,6 +18,11 @@ body {
 
 form {
     margin-bottom: 0px;
+}
+
+h1 {
+    color: #D6D6D7;
+    text-align: center;
 }
 
 input {
@@ -88,6 +89,7 @@ button {
 .navbar {
     position: relative;
     text-align: center;
+    padding: 10px;
 }
 
 .navbar a {
