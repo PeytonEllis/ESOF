@@ -11,6 +11,7 @@ class SeatingChartSchema extends Schema {
       table.string('Phone_Number')
       table.string('Seat_type')
       table.string('Seats_rsv')
+      table.string('Show').references('Show_date').inTable('shows')
       table.timestamps()
     })
   }
