@@ -21,10 +21,9 @@ Route.on('/').render('welcome')
 Route.on('/previous-shows').render('previous-shows')
 Route.on('/add-show').render('add-show')
 Route.on('/print-tickets').render('print-tickets')
-Route.on('/future-shows').render('future-shows')
+Route.get('/future-shows', 'ShowController.index')
 
 Route.post('/future-shows', 'SeatingChartController.create')
 Route.post('/add-shows', 'ShowController.create')
-
 // Potential view and controller function to display the database
 //Route.get('/database_display', 'SeatingChartController.display')

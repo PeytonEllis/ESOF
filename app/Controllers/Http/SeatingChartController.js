@@ -34,7 +34,7 @@ class SeatingChartController {
    */
   async create ({ request, response, view }) {
 
-    const data = await SeatingChart.create(request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv']))
+    const data = await SeatingChart.create(request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv', 'Show']))
 
     // save and get instance back
     return response.redirect('future-shows')

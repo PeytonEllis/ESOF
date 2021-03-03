@@ -1,0 +1,46 @@
+@layout('layouts.main')
+
+@section('extracss')
+@endsection
+
+@section('title')
+Future Shows
+@endsection
+
+@section('content')
+<div class="future_shows">
+    <form action="{{ route('SeatingChartController.create') }}" method="POST">
+        {{ csrfField() }}
+
+        <div class="show_input">
+                <label for="Name">Name:</label>
+                <input type="text" name="Name">
+        </div>
+
+        <div class="show_input">
+                <label for="Phone_Number">Phone Number:</label>
+                <input type="text" name="Phone_Number">
+        </div>
+
+        <div class="show_input">
+                <label for="Seat_type">Seat Type:</label>
+                <input type="text" name="Seat_type">
+        </div>
+
+        <div class="show_input">
+                <label for="Seats_rsv">Seat Reserved:</label>
+                <input type="text" name="Seats_rsv">
+        </div>
+
+        <div class="show_input">
+                <label for="Show">Show:</label>
+                <input type="text" name="Show">
+        </div>
+
+        <div id="submit_container">
+            <button type="submit">Enter</button>
+        </div>
+
+    </form>
+</div>
+@endsection

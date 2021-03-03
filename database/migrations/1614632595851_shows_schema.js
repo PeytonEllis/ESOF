@@ -9,6 +9,7 @@ class ShowsSchema extends Schema {
       table.increments('id')
       table.string('Show_title')
       table.string('Show_date').unique()
+      table.boolean('isPast')
       table.timestamps()
     })
   }
