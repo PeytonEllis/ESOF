@@ -8,8 +8,10 @@ Future Shows
 @endsection
 
 @section('content')
-  <ul class="list-group">
+
     @each(show in shows)
-      <li class="list-group-item"><a href="/future-shows/{{shows.id}}">{{shows.Show_title}}{{shows.Show_date}}</a></li>
+      <li class="list-group-item"><a href="/future-shows/{{show.id}}">
+      {{show.Show_title}}{{show.Show_date}}</a></li>
     @endeach
+
 @endsection

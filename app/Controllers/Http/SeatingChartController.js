@@ -20,7 +20,8 @@ class SeatingChartController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {
+  async index ({ params, view }) {
+
   }
 
   /**
@@ -32,12 +33,8 @@ class SeatingChartController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create ({ request, response, view }) {
+  async create ({ request, params }) {
 
-    const data = await SeatingChart.create(request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv', 'Show']))
-
-    // save and get instance back
-    return response.redirect('future-shows')
   }
 
   /**

@@ -4,12 +4,12 @@
 @endsection
 
 @section('title')
-Future Shows
+{{ show.Show_date }}
 @endsection
 
 @section('content')
 <div class="future_shows">
-    <form action="{{ route('SeatingChartController.create') }}" method="POST">
+    <form action="{{ route('ShowController.insert_ticket') }}" method="POST">
         {{ csrfField() }}
 
         <div class="show_input">
@@ -32,15 +32,19 @@ Future Shows
                 <input type="text" name="Seats_rsv">
         </div>
 
-        <div class="show_input">
-                <label for="Show">Show:</label>
-                <input type="text" name="Show">
-        </div>
-
         <div id="submit_container">
             <button type="submit">Enter</button>
         </div>
 
     </form>
 </div>
+
+<h1>Current Tickets</h1>
+
+@each(seating_chart in seating_charts)
+    <li class="list-group-item">
+    {{seating_chart.Name}}{{seating_chart.Phone_Number}}{{seating_chart.Seat_type}}{{seating_chart.Seats_rsv}}</a></li>
+@endeach
+
+
 @endsection
