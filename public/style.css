@@ -6,7 +6,7 @@
 }
 
 a {
-    color: red;
+    color: #2F2410;
     text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ form {
 }
 
 h1 {
-    color: #D6D6D7;
+    color: #FFFFFF;
     text-align: center;
     font-size: large;
     padding: 15px;
@@ -38,9 +38,9 @@ p {
 button {
     float: left;
     margin: auto;
-    background-color: #282C2F;
+    background-color: #E2DCC6;
     border: none;
-    color: #D6D6D7;
+    color: #000000;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -53,7 +53,7 @@ button {
     padding: 45px;
     margin: auto;
     width: 33%;
-    border-color: black;
+    border-color: #2F2410;
 }
 
 .container {
@@ -61,13 +61,13 @@ button {
     margin: auto;
     padding: 15px;
     box-sizing: border-box;
-    background-color: #202124;
+    background-color: #841B22;
 }
 
 .future_shows {
     width: 75%;
     margin: auto;
-    background-color: #D6D6D7;
+    background-color: #C87273;
     padding: 10px;
 }
 
@@ -100,7 +100,7 @@ button {
 
 .navbar li {
     display: inline;
-    background-color: #D6D6D7;
+    background-color: #E2DCC6;
 }
 
 .right {
@@ -130,7 +130,7 @@ button {
 
 .subtitle {
     padding: 15px;
-    color: #D6D6D7;
+    color: #E2DCC6;
     font-size: 17px;
     text-align: center;
     line-height: 2;
