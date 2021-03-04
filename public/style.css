@@ -108,6 +108,18 @@ button {
     width: 50%;
 }
 
+.show_display {
+    text-align: center;
+    color: #D6D6D7;
+    padding: 15px;
+    margin: auto;
+}
+
+.show_display a {
+    text-align: center;
+    color: #D6D6D7;
+}
+
 .show_input {
     height: 30px;
     width: 66%;
