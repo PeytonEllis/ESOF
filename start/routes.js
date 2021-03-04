@@ -27,6 +27,3 @@ Route.get('/future-shows/:id', 'ShowController.details')
 
 Route.post('/add-show', 'ShowController.create')
 Route.post('/future-shows', 'ShowController.insert_ticket')
-
-// Potential view and controller function to display the database
-//Route.get('/database_display', 'SeatingChartController.display')
