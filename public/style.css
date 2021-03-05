@@ -64,17 +64,31 @@ button {
     background-color: #6B1925;
 }
 
+.clear {
+    clear: both;
+}
+
+.database_entry {
+    margin: 25px;
+}
+
 .future_shows {
     width: 75%;
     margin: auto;
     background-color: #C87273;
     padding: 10px;
+    color:
 }
 
 .left {
     float: left;
     width: 50%;
 }
+
+
+/* .links a {
+    color: blue;
+} */
 
 .logo {
     background: url("/vcplogo.jpg") no-repeat;
@@ -100,7 +114,7 @@ button {
 
 .navbar li {
     display: inline;
-    background-color: #E2DCC6;
+    background-color: #D6D6D7;
 }
 
 .right {
@@ -108,7 +122,12 @@ button {
     width: 50%;
 }
 
+.right button {
+    float: right;
+}
+
 .show_display {
+    width: 66%;
     text-align: center;
     color: #D6D6D7;
     padding: 15px;
@@ -116,7 +135,6 @@ button {
 }
 
 .show_display a {
-    text-align: center;
     color: #D6D6D7;
 }
 

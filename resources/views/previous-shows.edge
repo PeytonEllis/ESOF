@@ -10,12 +10,14 @@ Previous Shows
 @section('content')
     <div class="show_display">
         @each(show in shows)
-          <li class="list-group-item">
-          <a href="/future-shows/{{show.id}}">
-          {{show.Show_title}}{{show.Show_date}}</a>
-          <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
-          <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
-          </li>
+          <div class="database_entry">
+            <a href="/future-shows/{{show.id}}">
+              Name: {{show.Show_title}}<br>Date: {{show.Show_date}}</a>
+            <div class="links">
+              <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
+              <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
+            </div>
+          </div>
         @endeach
     </div>
 @endsection

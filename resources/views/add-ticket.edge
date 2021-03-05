@@ -4,7 +4,7 @@
 @endsection
 
 @section('title')
-{{ show.Show_date }}
+    {{ show.Show_date }}
 @endsection
 
 @section('content')
@@ -41,13 +41,19 @@
 
 <h1>Current Tickets</h1>
 
-@each(seating_chart in seating_charts)
-    <li class="list-group-item">
-    {{seating_chart.Name}}{{seating_chart.Phone_Number}}{{seating_chart.Seat_type}}{{seating_chart.Seats_rsv}}</a>
-    <a href="/add-ticket/edit-ticket/{{seating_chart.id}}" class = "btn">Edit</a>
-    <a href="/add-ticket/delete/{{seating_chart.id}}" class = "btn">Delete</a>
-    </li>
-@endeach
-
+<div class="show_display">
+    @each(seating_chart in seating_charts)
+        <div class="database_entry">
+                Name: {{seating_chart.Name}}<br>
+                Phone Number: {{seating_chart.Phone_Number}}<br>
+                Seat_Type: {{seating_chart.Seat_type}}<br>
+                Seat Reserved: {{seating_chart.Seats_rsv}}<br>
+                <div class="links">
+                    <a href="/add-ticket/edit-ticket/{{seating_chart.id}}" class = "btn">Edit</a>
+                    <a href="/add-ticket/delete/{{seating_chart.id}}" class = "btn">Delete</a>
+                </div>
+        </div>
+    @endeach
+</div>
 
 @endsection

@@ -4,24 +4,32 @@
 @endsection
 
 @section('title')
-Future Shows
+    Future Shows
 @endsection
 
 @section('content')
     <div class="show_display">
         @each(show in shows)
-          <li class="list-group-item">
-          <a href="/future-shows/{{show.id}}">
-          {{show.Show_title}}{{show.Show_date}}</a>
-          <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
-          <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
-
-          <form action=" {{ route('ShowController.isPast', { id: show.id}) }}" method="POST">
-            {{ csrfField() }}
-            <button type="submit">Completed</button>
-          </form>
-
-          </li>
+          <div class="database_entry">
+            <div class="left">
+              <a href="/future-shows/{{show.id}}">
+                Name: {{show.Show_title}}<br>
+                Date: {{show.Show_date}}
+              <div class="links">
+                <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
+                <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
+              </div>
+            </div>
+            <div class="right">
+              <form action=" {{ route('ShowController.isPast', { id: show.id}) }}" method="POST">
+                {{ csrfField() }}
+                <button type="submit">
+                  Completed
+                </button>
+              </form>
+            </div>
+            <div class="clear"></div>
+          </div>
         @endeach
     </div>
 @endsection
