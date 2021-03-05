@@ -11,87 +11,35 @@
 const SeatingChart = use('App/Models/SeatingChart')
 
 class SeatingChartController {
-  /**
-   * Show a list of all seatingcharts.
-   * GET seatingcharts
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async index ({ params, view }) {
 
-  }
-
-  /**
-   * Render a form to be used for creating a new seatingchart.
-   * GET seatingcharts/create
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
   async create ({ request, params }) {
-
   }
 
-  /**
-   * Create/save a new seatingchart.
-   * POST seatingcharts
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async store ({ request, response }) {
+  async edit ({ params, view }) {
+    const seating_chart = await SeatingChart.find(params.id)
+
+    return view.render('edit-ticket', {
+      seating_chart: seating_chart
+    })
   }
 
-  /**
-   * Display a single seatingchart.
-   * GET seatingcharts/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async show ({ params, request, response, view }) {
-  }
-
-  /**
-   * Render a form to update an existing seatingchart.
-   * GET seatingcharts/:id/edit
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async edit ({ params, request, response, view }) {
-  }
-
-  /**
-   * Update seatingchart details.
-   * PUT or PATCH seatingcharts/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
   async update ({ params, request, response }) {
+    const seating_chart = await SeatingChart.find(params.id)
+
+    seating_chart.Name = request.all().Name
+    seating_chart.Phone_Number = request.all().Phone_Number
+    seating_chart.Seat_type = request.all().Seat_type
+    seating_chart.Seats_rsv = request.all().Seats_rsv
+
+    await seating_chart.save()
+    return response.redirect('back')
   }
 
-  /**
-   * Delete a seatingchart with id.
-   * DELETE seatingcharts/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async destroy ({ params, request, response }) {
+  async delete({ response, params}){
+    const seating_chart = await SeatingChart.find(params.id)
+
+    await seating_chart.delete()
+    return response.redirect('back')
   }
 }
 

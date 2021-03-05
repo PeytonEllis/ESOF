@@ -18,12 +18,19 @@ const Route = use('Route')
 
 // Render each view
 Route.on('/').render('welcome')
-Route.on('/previous-shows').render('previous-shows')
 Route.on('/add-show').render('add-show')
 Route.on('/print-tickets').render('print-tickets')
 
 Route.get('/future-shows', 'ShowController.index')
+Route.get('/previous-shows', 'ShowController.pastIndex')
+Route.get('/future-shows/delete/:id', 'ShowController.delete')
+Route.get('/future-shows/edit-show/:id', 'ShowController.edit')
+Route.get('/add-ticket/edit-ticket/:id', 'SeatingChartController.edit')
+Route.get('/add-ticket/delete/:id', 'SeatingChartController.delete')
 Route.get('/future-shows/:id', 'ShowController.details')
 
+Route.post('/future-shows/update/:id', 'ShowController.update')
+Route.post('/add-ticket/update/:id', 'SeatingChartController.update')
 Route.post('/add-show', 'ShowController.create')
 Route.post('/future-shows', 'ShowController.insert_ticket')
+Route.post('/future-Shows/isPast/:id', 'ShowController.isPast')
