@@ -1,6 +1,7 @@
 'use strict'
 //import Database from '@ioc:Adonis/Lucid/Database'
 const Show = use('App/Models/Show')
+const { validate } = use('Validator')
 var date
 
 class ShowController {
@@ -52,6 +53,14 @@ class ShowController {
   }
 
   async create ({ request, response}) {
+    //validate input
+    const validation = await validate(request.all(), {
+      Show_title: 'required',
+      Show_date: 'required'
+    })
+    if(validation.fails()){
+      return response.redirect('back')
+    }
 
     const data = request.only(['Show_title', 'Show_date'])
     data.isPast = 0
@@ -79,13 +88,22 @@ class ShowController {
   }
 
   async update ({ response, request, params}){
+
+    const validation = await validate(request.all(), {
+      Show_title: 'required',
+      Show_date: 'required'
+    })
+    if(validation.fails()){
+      return response.redirect('back')
+    }
+
     const show = await Show.find(params.id)
 
     show.Show_title = request.all().Show_title
     show.Show_date = request.all().Show_date
 
     await show.save()
-    return response.redirect('back')
+    return response.redirect('/future-shows')
   }
 
   async delete({ response, params}){
@@ -99,6 +117,16 @@ class ShowController {
 
   async insert_ticket({request, response, session}) {
     const SeatingChart = use('App/Models/SeatingChart')
+    const validation = await validate(request.all(), {
+      Name: 'required',
+      Phone_Number: 'required',
+      Seat_type: 'required',
+      Seats_rsv: 'required'
+    })
+    if(validation.fails()){
+      return response.redirect('back')
+    }
+
     const data = await request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv'])
     data.Show = date
     await SeatingChart.create(data)

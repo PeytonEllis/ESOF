@@ -9,6 +9,7 @@
  */
 
 const SeatingChart = use('App/Models/SeatingChart')
+const { validate } = use('Validator')
 
 class SeatingChartController {
 
@@ -24,6 +25,17 @@ class SeatingChartController {
   }
 
   async update ({ params, request, response }) {
+
+    const validation = await validate(request.all(), {
+      Name: 'required',
+      Phone_Number: 'required',
+      Seat_type: 'required',
+      Seats_rsv: 'required'
+    })
+    if(validation.fails()){
+      return response.redirect('back')
+    }
+
     const seating_chart = await SeatingChart.find(params.id)
 
     seating_chart.Name = request.all().Name
@@ -32,7 +44,7 @@ class SeatingChartController {
     seating_chart.Seats_rsv = request.all().Seats_rsv
 
     await seating_chart.save()
-    return response.redirect('back')
+    return response.redirect('/future-shows')
   }
 
   async delete({ response, params}){
