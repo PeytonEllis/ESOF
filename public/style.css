@@ -56,16 +56,16 @@ button {
     border-color: #2F2410;
 }
 
+.clear {
+    clear: both;
+}
+
 .container {
     width: 80%;
     margin: auto;
     padding: 15px;
     box-sizing: border-box;
     background-color: #6B1925;
-}
-
-.clear {
-    clear: both;
 }
 
 .database_entry {
@@ -77,7 +77,6 @@ button {
     margin: auto;
     background-color: #C87273;
     padding: 10px;
-    color:
 }
 
 .left {
@@ -110,6 +109,18 @@ button {
 .navbar li {
     display: inline;
     background-color: #D6D6D7;
+}
+
+.picture {
+    margin: auto;
+    width: 50%;
+    display: block;
+}
+
+.print_section {
+    width: 66%;
+    margin: auto;
+    height: 150px;
 }
 
 .right {
