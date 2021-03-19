@@ -20,6 +20,7 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 Route.on('/add-show').render('add-show')
 Route.on('/print-tickets').render('print-tickets')
+Route.on('/print-tickets/:id').render('print-tickets')
 
 Route.get('/future-shows', 'ShowController.index')
 Route.get('/previous-shows', 'ShowController.pastIndex')

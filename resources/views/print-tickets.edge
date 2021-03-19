@@ -9,11 +9,11 @@
 
 @section('content')
     <div class="picture">
-        <h1>Displaying Seating Chart for "Chosen_Show"</h1>
+        <h1>Displaying Seating Chart for {{seating_chart.Name}}</h1>
         <h3>*NOTE: The idea here is to eventually be able to access this page from "Future Shows" (and possibly from "Past Shows");
         the seating chart graphic will eventually be populated from the database, and the "print all" button prints all of the tickets from 
         the displayed show's seating chart.</h3><br>
-        <img src="VCPSeating.svg" alt="VCP-seating-chart">
+        <img src="/VCPSeating.svg" alt="VCP-seating-chart">
     </div>
     <div class="print_section">
         <h1>Print all tickets from the seating chart displayed above:</h1>
