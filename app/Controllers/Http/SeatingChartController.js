@@ -10,6 +10,7 @@
 
 const SeatingChart = use('App/Models/SeatingChart')
 const { validate } = use('Validator')
+var date
 
 class SeatingChartController {
 
@@ -52,6 +53,27 @@ class SeatingChartController {
 
     await seating_chart.delete()
     return response.redirect('back')
+  }
+
+  /*
+* gets all information to be formatted for a given ticket
+*/
+  async ticket( {view, params}) {
+    const ticket = await SeatingChart.find(params.id)
+    date = ticket.Show
+
+    const current_show = await SeatingChart
+      .query()
+      .select('id', 'Show_title', 'Show_date')
+      .from('shows')
+      .where('Show_date', '=', ticket.Show)
+      .fetch()
+
+    console.log(current_show)
+    return view.render('ticket', {
+      seating_charts: ticket.toJSON(),
+      shows: current_show.toJSON()
+    })
   }
 }
 
