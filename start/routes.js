@@ -29,7 +29,7 @@ Route.get('/add-ticket/delete/:id', 'SeatingChartController.delete')
 Route.get('/future-shows/:id', 'ShowController.details')
 Route.get('/print-tickets', 'ShowController.print_display')
 Route.get('/print-tickets/:id', 'ShowController.print_tickets')
-Route.get('/print-tickets/print/:id', 'SeatingChartController.ticket')
+Route.get('/print-tickets/print/:id', 'ShowController.ticket')
 
 Route.post('/future-shows/update/:id', 'ShowController.update')
 Route.post('/add-ticket/update/:id', 'SeatingChartController.update')

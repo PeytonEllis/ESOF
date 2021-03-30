@@ -40,7 +40,7 @@ class ShowController {
   }
 
   /*
-  * gets all information for add-tickets page.
+  * gets all information for add-tickets page to display tickets for selected show
   */
   async details({ params, view }){
 
@@ -192,6 +192,22 @@ class ShowController {
     return view.render('print', {
       show: show.toJSON(),
       seating_charts: current_show.toJSON()
+    })
+  }
+  /*
+* gets all information to be formatted for a given ticket
+*/
+  async ticket( {view, params}) {
+    const SeatingChart = use('App/Models/SeatingChart')
+    const ticket = await SeatingChart.find(params.id)
+
+    const current_show = await Show
+
+
+    console.log(current_show)
+    return view.render('ticket', {
+      seating_chart: ticket.toJSON(),
+      show: current_show.toJSON()
     })
   }
 
