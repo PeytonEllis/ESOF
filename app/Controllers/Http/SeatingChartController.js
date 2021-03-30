@@ -55,7 +55,25 @@ class SeatingChartController {
     return response.redirect('back')
   }
 
+  /*
+* gets all information to be formatted for a given ticket
+*/
+  async ticket( {view, params}) {
+    const ticket = await SeatingChart.find(params.id)
 
+    const current_show = await SeatingChart
+      .query()
+      .select('*')
+      .from('shows')
+      .where('Show_title', 'Romeo')
+      .fetch()
+
+    console.log(current_show)
+    return view.render('ticket', {
+      seating_chart: ticket.toJSON(),
+      show: current_show.toJSON()
+    })
+  }
 }
 
 module.exports = SeatingChartController

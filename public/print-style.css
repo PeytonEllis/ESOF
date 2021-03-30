@@ -1,0 +1,42 @@
+@media print {
+    @page {
+        /* The size is currently set to 'A4'; this probably needs to 
+        be changed in the future*/
+        size: A4;
+        margin: 0mm;
+    }
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+}
+
+a {
+    color: #C87273;
+}
+
+body {
+    text-align: center;
+    background-color: #323639;
+    color: #D6D6D7;
+}
+
+.no-print {
+    padding: 30px;
+}
+
+.print-container {
+    width: 66%;
+    margin: auto;
+    padding: 30px;
+}
+
+.ticket {
+    padding-bottom: 15px;
+    border: #C87273;
+    border-style: dashed;
+}
+
+.ticket-element {
+    padding: 5px;
+}

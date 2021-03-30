@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{--  {{ style('reset') }}  --}}
+    {{ style('print-style') }}
+
+    <title> 
+        Print Preview
+    </title>
+</head>
+
+<body>
+    <div class="no-print">
+        <h1>Preview of Ticket to be Printed:</h1>
+    </div>
+
+    <div class="print-container">
+        <div class="ticket">
+            <div class="ticket-element">
+                Show:{{show.Show_title}}
+            </div>
+            <div class="ticket-element">
+                Date: {{show.Show_date}}<br>
+            </div>
+            <br>
+            <div class="ticket-element">
+                Name: <br>
+            </div>
+            <div class="ticket-element">
+                Seat Type: <br>
+            </div>
+            <div class="ticket-element">
+                Seat Reserved: <br>
+            </div>
+        </div>
+        
+        <div class="no-print">
+            Click "print" if the ticket information displayed within the pink border is correct<br>
+            <a href="javascript:window.print()" class = "btn">Print</a>
+        </div>
+    </div>
+</body>
+
+</html>
