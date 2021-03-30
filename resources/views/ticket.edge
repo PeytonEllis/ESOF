@@ -4,9 +4,13 @@
 @endsection
 
 @section('title')
-    {{ show.Show_title }}
 @endsection
 
 @section('content')
-
+    {{ show.Show_title }}
+    {{ show.Show_date }}
+    {{ seating_chart.Name }}
+    {{ seating_chart.Seat_type }}
+    {{ seating_chart.Seats_rsv }}
+    <input type="button" value="Print this page" onClick="window.print()">
 @endsection

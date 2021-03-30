@@ -21,6 +21,7 @@ Route.on('/').render('welcome')
 Route.on('/add-show').render('add-show')
 
 Route.get('/future-shows', 'ShowController.index')
+<<<<<<< HEAD
 Route.get('/print-tickets', 'ShowController.print_display')
 Route.get('/print-tickets/:id', 'ShowController.print_tickets')
 
@@ -29,12 +30,17 @@ Route.get('/print-tickets/:id', 'ShowController.print_tickets')
 Route.on('/print-tickets/print/:id').render('print-page')
 
 
+=======
+>>>>>>> d47874d107dc24beb4cdc4183a0b7c528527418a
 Route.get('/previous-shows', 'ShowController.pastIndex')
 Route.get('/future-shows/delete/:id', 'ShowController.delete')
 Route.get('/future-shows/edit-show/:id', 'ShowController.edit')
 Route.get('/add-ticket/edit-ticket/:id', 'SeatingChartController.edit')
 Route.get('/add-ticket/delete/:id', 'SeatingChartController.delete')
 Route.get('/future-shows/:id', 'ShowController.details')
+Route.get('/print-tickets', 'ShowController.print_display')
+Route.get('/print-tickets/:id', 'ShowController.print_tickets')
+Route.get('/print-tickets/print/:id', 'SeatingChartController.ticket')
 
 Route.post('/future-shows/update/:id', 'ShowController.update')
 Route.post('/add-ticket/update/:id', 'SeatingChartController.update')
