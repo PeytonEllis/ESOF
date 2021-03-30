@@ -3,12 +3,7 @@
         /* The size is currently set to 'A4'; this probably needs to 
         be changed in the future*/
         size: A4;
-    }
-    @page :footer {
-        display: none
-    }
-    @page :header {
-        display: none
+        margin: 0mm;
     }
     .no-print,
     .no-print * {
