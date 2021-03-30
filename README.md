@@ -59,5 +59,19 @@ The homepage consists of only four buttons:
 3. Add Shows - To add shows to the schedule
 4. Print Tickets - To view and print tickets for particular shows
 
+## Previous Shows
+From this screen the user can look at a list of the previous shows and related info, including; Name, Date and Time.
+The user also has the option to delete previous showtimes as well as edit the associated data.
+
+## Future Shows
+From this screen the user can look at all pcoming shows and see related info, including; Name and Date.
+The user can also edit, delete and be taken to the relevant print screen.
+Marking a show as complete will send it to the Previous Shows page. 
+
+## Add Shows
+From this screen the user can add shows by giving a title and date. All shows will then be added to the Future Shows page. 
+
+## Print Tickets
+When the user selects an upcoming show it will display all tickets available. When the user selects print it will bring them to another page with the individual ticket information and a print button
 ##### To report a bug users can email vcpticketing@gmail.com
 
