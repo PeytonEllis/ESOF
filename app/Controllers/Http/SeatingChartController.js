@@ -69,7 +69,7 @@ class SeatingChartController {
       .fetch()
 
     console.log(current_show)
-    return view.render('ticket', {
+    return view.render('print-page', {
       seating_chart: ticket.toJSON(),
       show: current_show.toJSON()
     })

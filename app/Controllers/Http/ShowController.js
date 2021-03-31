@@ -194,23 +194,6 @@ class ShowController {
       seating_charts: current_show.toJSON()
     })
   }
-  /*
-* gets all information to be formatted for a given ticket
-*/
-  async ticket( {view, params}) {
-    const SeatingChart = use('App/Models/SeatingChart')
-    const ticket = await SeatingChart.find(params.id)
-
-    const current_show = await Show
-
-
-    console.log(current_show)
-    return view.render('ticket', {
-      seating_chart: ticket.toJSON(),
-      show: current_show.toJSON()
-    })
-  }
-
 }
 
 module.exports = ShowController
