@@ -1,0 +1,2 @@
+# Testing README
+The following test folder contains a series of tests to be performed on the various aspects of the VC PLayers website. These tests were created and run entirely with [Selenium](https://www.selenium.dev/projects/).
