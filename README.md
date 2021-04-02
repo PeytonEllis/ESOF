@@ -30,7 +30,7 @@ Next clone this repo to your local machine with the following command:
 git clone https://github.com/PeytonEllis/ESOF.git
 ```
 
-To boot the server run the folling command from the ESOF subdirectory
+To boot the server run the following command from the ESOF subdirectory
 
 ```bash
 adonis serve
