@@ -1,2 +1,2 @@
 # Testing README
-The following test folder contains a series of tests to be performed on the various aspects of the VC PLayers website. These tests were created and run entirely with [Selenium](https://www.selenium.dev/projects/).
+The following test folder contains a series of tests to be performed on the various aspects of the VC PLayers website. These tests were created and run entirely with [Selenium](https://www.selenium.dev/projects/). The file `test-execution-log.txt` contains the history of the results from the last time that the test suite was run. To run the tests yourself, simply open `vcplayers-tests.side` in the Selenium IDE and press play.
