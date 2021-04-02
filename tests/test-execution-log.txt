@@ -1,0 +1,294 @@
+Running 'add-multiple-shows'
+11:44:17
+1.
+open on / OK
+11:44:17
+2.
+setWindowSize on 1920x1080 OK
+11:44:17
+3.
+click on linkText=Add Shows OK
+11:44:17
+4.
+click on name=Show_title OK
+11:44:18
+5.
+type on name=Show_title with value "Hamlet, Act I" OK
+11:44:19
+6.
+click on name=Show_date OK
+11:44:19
+7.
+type on name=Show_date with value "4/10/21" OK
+11:44:19
+8.
+click on css=button OK
+11:44:19
+9.
+click on name=Show_title OK
+11:44:19
+10.
+type on name=Show_title with value Hamlet, Act II OK
+11:44:19
+11.
+click on name=Show_date OK
+11:44:19
+12.
+type on name=Show_date with value "4/11/21" OK
+11:44:19
+13.
+click on css=button OK
+11:44:20
+14.
+click on name=Show_title OK
+11:44:20
+15.
+type on name=Show_title with value "Hamlet, Act III" OK
+11:44:20
+16.
+click on name=Show_date OK
+11:44:20
+17.
+type on name=Show_date with value "4/12/21" OK
+11:44:20
+18.
+click on css=button OK
+11:44:20
+19.
+click on linkText=Future Shows OK
+11:44:20
+20.
+click on linkText=Delete OK
+11:44:20
+21.
+click on linkText=Delete OK
+11:44:21
+22.
+click on linkText=Delete OK
+11:44:21
+23.
+close OK
+11:44:21
+'add-multiple-shows' completed successfully
+11:44:21
+
+
+Running 'add-show-and-complete'
+11:44:21
+1.
+open on / OK
+11:44:21
+2.
+setWindowSize on 1920x1080 OK
+11:44:21
+3.
+click on linkText=Add Shows OK
+11:44:21
+4.
+click on name=Show_title OK
+11:44:22
+5.
+type on name=Show_title with value "Hamlet" OK
+11:44:22
+6.
+click on name=Show_date OK
+11:44:23
+7.
+type on name=Show_date with value "4/10/21" OK
+11:44:23
+8.
+click on css=button OK
+11:44:23
+9.
+click on linkText=Future Shows OK
+11:44:23
+10.
+click on css=button OK
+11:44:23
+11.
+click on linkText=Previous Shows OK
+11:44:23
+12.
+click on linkText=Delete OK
+11:44:23
+13.
+close OK
+11:44:24
+'add-show-and-complete' completed successfully
+11:44:24
+
+
+Running 'add-show-and-delete'
+11:44:24
+1.
+open on / OK
+11:44:24
+2.
+setWindowSize on 1920x1080 OK
+11:44:24
+3.
+click on linkText=Add Shows OK
+11:44:24
+4.
+click on name=Show_title OK
+11:44:25
+5.
+type on name=Show_title with value "Hamlet" OK
+11:44:25
+6.
+click on name=Show_date OK
+11:44:25
+7.
+type on name=Show_date with value "4/10/21" OK
+11:44:25
+8.
+click on css=button OK
+11:44:25
+9.
+click on linkText=Future Shows OK
+11:44:25
+10.
+click on linkText=Delete OK
+11:44:25
+11.
+close OK
+11:44:25
+'add-show-and-delete' completed successfully
+11:44:25
+
+
+Running 'add-show-and-edit'
+11:44:25
+1.
+open on / OK
+11:44:26
+2.
+setWindowSize on 1920x1080 OK
+11:44:26
+3.
+click on linkText=Add Shows OK
+11:44:26
+4.
+click on name=Show_title OK
+11:44:26
+5.
+type on name=Show_title with value "Hamlet" OK
+11:44:26
+6.
+click on name=Show_date OK
+11:44:27
+7.
+type on name=Show_date with value "4/10/21" OK
+11:44:27
+8.
+click on css=button OK
+11:44:27
+9.
+click on linkText=Future Shows OK
+11:44:27
+10.
+click on linkText=Edit OK
+11:44:27
+11.
+click on name=Show_title OK
+11:44:27
+12.
+type on name=Show_title with value "Hamlet, Act II" OK
+11:44:27
+13.
+click on name=Show_date OK
+11:44:27
+14.
+type on name=Show_date with value "4/11/21" OK
+11:44:28
+15.
+click on css=button OK
+11:44:28
+16.
+click on linkText=Delete OK
+11:44:28
+17.
+close OK
+11:44:28
+'add-show-and-edit' completed successfully
+11:44:28
+
+
+Running 'add-show-and-print'
+11:44:28
+1.
+open on / OK
+11:44:28
+2.
+setWindowSize on 1920x1080 OK
+11:44:28
+3.
+click on linkText=Add Shows OK
+11:44:28
+4.
+click on name=Show_title OK
+11:44:29
+5.
+type on name=Show_title with value "Hamlet" OK
+11:44:30
+6.
+click on name=Show_date OK
+11:44:31
+7.
+type on name=Show_date with value "4/10/21" OK
+11:44:32
+8.
+click on css=button OK
+11:44:33
+9.
+click on linkText=Future Shows OK
+11:44:33
+10.
+click on linkText=Print OK
+11:44:33
+11.
+click on linkText=Future Shows OK
+11:44:33
+12.
+click on linkText=Delete OK
+11:44:34
+13.
+close OK
+11:44:34
+'add-show-and-print' completed successfully
+11:44:34
+
+
+Running 'add-show-and-try-insert-null'
+11:44:34
+1.
+open on / OK
+11:44:34
+2.
+setWindowSize on 1920x1080 OK
+11:44:34
+3.
+click on linkText=Add Shows OK
+11:44:34
+4.
+click on name=Show_title OK
+11:44:35
+5.
+type on name=Show_title OK
+11:44:35
+6.
+click on name=Show_date OK
+11:44:35
+7.
+type on name=Show_date with value "4/10/21" OK
+11:44:35
+8.
+click on css=button OK
+11:44:36
+9.
+click on linkText=Previous Shows OK
+11:44:36
+10.
+close OK
+11:44:36
+'add-show-and-try-insert-null' completed successfully
