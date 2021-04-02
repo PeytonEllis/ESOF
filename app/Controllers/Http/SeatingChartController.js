@@ -60,19 +60,18 @@ class SeatingChartController {
 */
   async ticket( {view, params}) {
     const ticket = await SeatingChart.find(params.id)
-    date = ticket.Show
 
     const current_show = await SeatingChart
       .query()
-      .select('id', 'Show_title', 'Show_date')
+      .select('*')
       .from('shows')
-      .where('Show_date', '=', ticket.Show)
+      .where('Show_title', 'Romeo')
       .fetch()
 
     console.log(current_show)
-    return view.render('ticket', {
-      seating_charts: ticket.toJSON(),
-      shows: current_show.toJSON()
+    return view.render('print-page', {
+      seating_chart: ticket.toJSON(),
+      show: current_show.toJSON()
     })
   }
 }

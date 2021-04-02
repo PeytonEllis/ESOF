@@ -40,7 +40,7 @@ class ShowController {
   }
 
   /*
-  * gets all information for add-tickets page.
+  * gets all information for add-tickets page to display tickets for selected show
   */
   async details({ params, view }){
 
@@ -194,7 +194,6 @@ class ShowController {
       seating_charts: current_show.toJSON()
     })
   }
-
 }
 
 module.exports = ShowController
