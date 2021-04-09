@@ -24,10 +24,20 @@ To install AdonisJs run the following command:
 npm i -g @adonisjs/cli
 ```
 
+It is also necessary to download and install a few more dependencies, such as Adonis' Validator:
+```bash
+adonis install @adonisjs/validator
+```
+
 Next clone this repo to your local machine with the following command:
 
 ```bash
 git clone https://github.com/PeytonEllis/ESOF.git
+```
+
+Set up the database with migrations:
+```bash
+adonis migration:refresh
 ```
 
 To boot the server run the following command from the ESOF subdirectory
