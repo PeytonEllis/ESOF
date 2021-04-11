@@ -95,6 +95,15 @@ class ShowController {
     return response.redirect('back')
   }
 
+  async oops ({params, response}){
+    const show = await Show.find(params.id)
+
+    show.isPast = 0
+
+    await show.save()
+    return response.redirect('back')
+  }
+
   /*
   * renders edit-show with auto-filled data
   */
