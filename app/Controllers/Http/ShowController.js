@@ -3,6 +3,7 @@
 const Show = use('App/Models/Show')
 const { validate } = use('Validator')
 var date
+var showToPrint
 
 class ShowController {
 
@@ -162,6 +163,7 @@ class ShowController {
   * displays all uncompleted shows on print-tickets page
   */
   async print_display( {view}) {
+
     const future = await Show
       .query()
       .select('id', 'Show_title', 'Show_date')
@@ -181,6 +183,9 @@ class ShowController {
     const show = await Show.find(params.id)
 
     date = show.Show_date
+    showToPrint = await Show.find(params.id)
+
+    console.log(showToPrint)
 
     const current_show = await Show
       .query()
@@ -192,6 +197,22 @@ class ShowController {
     return view.render('print', {
       show: show.toJSON(),
       seating_charts: current_show.toJSON()
+    })
+  }
+
+  /*
+* gets all information to be formatted for a given ticket
+*/
+  async ticket( {view, params}) {
+    const SeatingChart = use('App/Models/SeatingChart')
+    const ticket = await SeatingChart.find(params.id)
+
+    const current_show = showToPrint
+    console.log(current_show)
+
+    return view.render('print-page', {
+      seating_chart: ticket.toJSON(),
+      show: current_show.toJSON()
     })
   }
 }
