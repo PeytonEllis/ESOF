@@ -8,23 +8,33 @@ Add Shows
 @endsection
 
 @section('content')
-<div class="future_shows">
-    <form action="{{ route('ShowController.create') }}" method="POST">
-        {{ csrfField() }}
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+<body>
+  <div class="future_shows">
+      <form action="{{ route('ShowController.create') }}" method="POST" autocomplete="off">
+          {{ csrfField() }}
 
-        <div class="show_input">
-                <label for="Show_title">Show Title:</label>
-                <input type="text" name="Show_title">
-        </div>
-        <div class="show_input">
-                <label for="Show_date">Show Date:</label>
-                <input type="text" name="Show_date">
-        </div>
+          <div class="show_input">
+                  <label for="Show_title">Show Title:</label>
+                  <input type="text" name="Show_title">
+          </div>
+          <div class="show_input">
+                  <label for="Show_date">Show Date:</label>
+                  <input type="text" id="datepicker" name="Show_date">
+          </div>
 
-        <div id="submit_container">
-            <button type="submit">Enter</button>
-        </div>
+          <div id="submit_container">
+              <button type="submit">Enter</button>
+          </div>
 
-    </form>
-</div>
+      </form>
+  </div>
+  <script src="pikaday.js"></script>
+  <script>
+      var picker = new Pikaday({ field: document.getElementById('datepicker') });
+  </script>
+</body>
 @endsection
