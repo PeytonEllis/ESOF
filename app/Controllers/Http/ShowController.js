@@ -152,6 +152,7 @@ class ShowController {
   */
   async insert_ticket({request, response, session}) {
     const SeatingChart = use('App/Models/SeatingChart')
+
     const validation = await validate(request.all(), {
       Name: 'required',
       Phone_Number: 'required',
@@ -164,6 +165,32 @@ class ShowController {
 
     const data = await request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv'])
     data.Show = date
+
+    const namesQuery = await Show
+      .query()
+      .select('Name', 'Seats_rsv')
+      .from('seating_charts')
+      .where('Show', date)
+      /*.whereExists(function() {
+      this.select('1').from('seating_charts').whereRaw('Show = ?', date).whereRaw('Name = ?', data.Name)
+    })*/
+      .fetch()
+
+    var names = namesQuery.toJSON()
+    console.log(names)
+    var flag = false
+    for (var i = 0; i < names.length; ++i) {
+      var name = names[i]
+      if(name.Name == data.Name || name.Seats_rsv == data.Seats_rsv) {
+        flag = true
+      }
+    }
+
+    if(flag) {
+      session.flash({ notification: 'Name has already been used OR seat has already been booked' })
+      return response.redirect('back')
+    }
+
     await SeatingChart.create(data)
     return response.redirect('back')
   }
