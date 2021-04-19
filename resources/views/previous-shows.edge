@@ -13,23 +13,33 @@ Previous Shows
           <div class="database_entry">
 
 
-            <div class="previous_show_data"
-              <a href="/future-shows/{{show.id}}">
-                Name: {{show.Show_title}}<br>Date: {{show.Show_date}}
-              </a>
-              <div class="links">
-                <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
-                <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
-              </div>
+            <div class="left left_color">
+                <div class="previous_show_data"
+                  <a href="/future-shows/{{show.id}}">
+                    Name: {{show.Show_title}}<br>Date: {{show.Show_date}}
+                  </a>
+                </div>
+                <div class="undo">
+                  <form action=" {{ route('ShowController.oops', { id: show.id}) }}" method="POST">
+                    {{ csrfField() }}
+                    <button type="submit">
+                      Send back to Future Shows
+                    </button>
+                  </form>
+                </div>
             </div>
-            <div class="undo">
-              <form action=" {{ route('ShowController.oops', { id: show.id}) }}" method="POST">
-                {{ csrfField() }}
-                <button type="submit">
-                  Send back to Future Shows
-                </button>
-              </form>
+
+          <div class="right">
+            <div class="custom_button color1">
+              <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
             </div>
+            <div class="custom_button color2">
+              <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+
 
           </div>
         @endeach

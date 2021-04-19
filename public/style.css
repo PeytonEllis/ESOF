@@ -36,7 +36,8 @@ p {
 }
 
 button {
-    float: left;
+    /* float: left; */
+    /* display: block; */
     margin: auto;
     background-color: #E2DCC6;
     border: none;
@@ -47,6 +48,14 @@ button {
     font-size: 16px;
     cursor: pointer;
     padding: 5px;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+.adjust_height {
+    height: 108px;
 }
 
 .button-panel {
@@ -68,9 +77,40 @@ button {
     background-color: #6B1925;
 }
 
+.color1 {
+    background-color: red;
+}
+
+.color2 {
+    background-color: green;
+}
+
+.color3 {
+    background-color: blue;
+}
+
+.custom_button {
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.custom_button:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
 .database_entry {
     margin: 25px;
     padding-bottom: 15px;
+}
+
+.footer {
+    background-color: grey;
+    width: 80%;
+    margin: auto;
 }
 
 .future_shows {
@@ -83,6 +123,10 @@ button {
 .left {
     float: left;
     width: 50%;
+}
+
+.left_color {
+    background-color: crimson;
 }
 
 .logo {
@@ -105,6 +149,10 @@ button {
 
 .navbar a {
     padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: darkgrey;
 }
 
 .navbar li {
