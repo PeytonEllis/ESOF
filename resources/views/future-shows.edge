@@ -14,17 +14,19 @@
 
 
             <div class="left left_color adjust_height">
-              <a href="/future-shows/{{show.id}}">
-                Name: {{show.Show_title}}<br>
-                Date: {{show.Show_date}}
-              </a>
-              <div class="form_container">
-                  <form action=" {{ route('ShowController.isPast', { id: show.id}) }}" method="POST">
-                    {{ csrfField() }}
-                    <button type="submit">
-                        Completed
-                    </button>
-                  </form>
+              <div class="left_container">
+                  <a href="/future-shows/{{show.id}}">
+                    Name: {{show.Show_title}}<br>
+                    Date: {{show.Show_date}}
+                  </a>
+                  <div class="form_container">
+                      <form action=" {{ route('ShowController.isPast', { id: show.id}) }}" method="POST">
+                        {{ csrfField() }}
+                        <button type="submit">
+                            Completed
+                        </button>
+                      </form>
+                  </div>
               </div>
             </div>
 

@@ -122,6 +122,10 @@ p {
     background-color: #7E685A;
 }
 
+.left_container {
+    padding: 10px;
+}
+
 .logo {
     background: url("/vcplogo.jpg") no-repeat;
     width: 370px;
