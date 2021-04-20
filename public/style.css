@@ -58,16 +58,8 @@ p {
     clear: both;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 15px;
-    box-sizing: border-box;
-    background-color: #4E4E50;
-}
-
 .color1 {
-    background-color: #6F2232;
+    background-color: #950740;
 }
 
 .color2 {
@@ -75,7 +67,16 @@ p {
 }
 
 .color3 {
-    background-color: #950740;
+    background-color: #6F2232;
+}
+
+.container {
+    width: 66%;
+    height: 800px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #4E4E50;
 }
 
 .custom_button {
@@ -97,9 +98,20 @@ p {
 }
 
 .footer {
-    background-color: grey;
-    width: 80%;
+    background-color: #7E685A;
+    width: 66%;
     margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footer_text {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.footer_text a {
+    color: #950740;
 }
 
 .form_container {
@@ -109,8 +121,8 @@ p {
 .future_shows {
     width: 75%;
     margin: auto;
-    background-color: #7E685A;
     padding: 10px;
+    color: #D6D6D7;
 }
 
 .left {
