@@ -4,27 +4,27 @@
 @endsection
 
 @section('title')
-Edit Shows
+    Edit Shows
 @endsection
 
 @section('content')
-<div class="future_shows">
-    <form action="{{ route('ShowController.update', { id: show.id}) }}" method="POST">
-        {{ csrfField() }}
+    <div class="future_shows">
+        <form action="{{ route('ShowController.update', { id: show.id}) }}" method="POST">
+            {{ csrfField() }}
 
-        <div class="show_input">
+            <div class="show_input">
                 <label for="Show_title">Show Title:</label>
                 <input type="text" name="Show_title" value="{{ show.Show_title }}">
-        </div>
-        <div class="show_input">
+            </div>
+            <div class="show_input">
                 <label for="Show_date">Show Date:</label>
                 <input type="text" name="Show_date" value="{{ show.Show_date }}">
-        </div>
+            </div>
 
-        <div id="submit_container">
-            <button type="submit">Enter</button>
-        </div>
+            <div id="submit_container">
+                <button type="submit">Enter</button>
+            </div>
 
-    </form>
-</div>
+        </form>
+    </div>
 @endsection
