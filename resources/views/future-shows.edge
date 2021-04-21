@@ -12,7 +12,7 @@
         @each(show in shows)
             <div class="database_entry">
 
-                <div class="left left_color adjust_height">
+                <div class="left left_color">
                     <div class="left_container">
                         <a href="/future-shows/{{show.id}}">
                             Name: {{show.Show_title}}<br>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="right">
+                <div class="right" id="right_future_shows">
                     <div class="custom_button color1">
                         <a href="/future-shows/edit-show/{{show.id}}" class="button">Edit</a>
                     </div>

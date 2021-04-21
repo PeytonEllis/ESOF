@@ -19,6 +19,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     padding: 5px;
+    border-radius: 15px;
 }
 
 button:hover {
@@ -42,10 +43,6 @@ input {
 
 p {
     margin: auto;
-}
-
-.adjust_height {
-    height: 108px;
 }
 
 .button-panel {
@@ -72,11 +69,11 @@ p {
 
 .container {
     width: 66%;
-    height: 800px;
     margin: auto;
     padding: 15px;
     box-sizing: border-box;
     background-color: #4E4E50;
+    border-radius: 25px 25px 0px 0px;
 }
 
 .custom_button {
@@ -94,7 +91,7 @@ p {
 
 .database_entry {
     margin: 25px;
-    padding-bottom: 15px;
+    padding: 15px;
 }
 
 .footer {
@@ -103,6 +100,7 @@ p {
     margin: auto;
     padding-top: 5px;
     padding-bottom: 5px;
+    border-radius: 0px 0px 25px 25px;
 }
 
 .footer_text {
@@ -128,6 +126,8 @@ p {
 .left {
     float: left;
     width: 50%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .left_color {
@@ -136,6 +136,10 @@ p {
 
 .left_container {
     padding: 10px;
+}
+
+.left_container a:hover {
+    color: #C3073F;
 }
 
 .logo {
@@ -162,11 +166,13 @@ p {
 
 .navbar a:hover {
     background-color: darkgrey;
+    border-radius: 15px;
 }
 
 .navbar li {
     display: inline;
     background-color: #D6D6D7;
+    border-radius: 15px;
 }
 
 .picture {
@@ -186,9 +192,14 @@ p {
     height: 150px;
 }
 
+.r_bottom {
+    height: 33%;
+}
+
 .right {
     float: right;
     width: 50%;
+    box-sizing: border-box;
 }
 
 .right button {
@@ -234,9 +245,13 @@ p {
 
 #submit_container {
     height: 28px;
-    width: 48.25px;
+    width: 90px;
     margin: auto;
     padding: 10px;
+}
+
+#submit_container button {
+    width: 90px;
 }
 
 @keyframes slideUp {
