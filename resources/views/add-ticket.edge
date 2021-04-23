@@ -39,12 +39,45 @@
             </div>
 
             <div id="submit_container">
-                <button type="submit">Enter</button>
+                <button type="submit">Submit</button>
             </div>
+
+            <div class="custom_button color2">
+                <btn id="myBtn">View Seating Chart</btn>
+                <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="myImg" src="/VCPSeating.svg" alt="Seating Chart">
+                <div id="caption"></div>
+                </div>
+            
+
+            <script>
+                var modal = document.getElementById("myModal");
+          
+                var btn = document.getElementById("myBtn");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+          
+                btn.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                }
+          
+                var span = document.getElementsByClassName("close")[0];
+          
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                </script>
+
+            </div>
+
 
         </form>
     </div>
 
+    <div class="vertical_space"></div>
     <h1>Current Tickets</h1>
 
     <div class="show_display">
