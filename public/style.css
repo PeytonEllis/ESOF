@@ -7,6 +7,7 @@ body {
     font-family: 'Verdana';
     background-color: #1A1A1D;
     padding: 10px;
+    height: 100%;
 }
 
 button {
@@ -30,11 +31,16 @@ form {
     margin-bottom: 0px;
 }
 
+html {
+    height: 100%;
+}
+
 h1 {
     color: #D6D6D7;
     text-align: center;
     font-size: large;
     padding: 15px;
+    cursor: default;
 }
 
 input {
@@ -43,6 +49,7 @@ input {
 
 p {
     margin: auto;
+    cursor: default;
 }
 
 .button-panel {
@@ -82,6 +89,10 @@ p {
     text-decoration: none;
     text-align: center;
     text-decoration: none;
+}
+
+.custom_button a {
+    display: block;
 }
 
 .custom_button:hover {
@@ -184,16 +195,13 @@ p {
 .previous_show_data {
     width: auto;
     margin: auto;
+    cursor: default;
 }
 
 .print_section {
     width: 66%;
     margin: auto;
     height: 150px;
-}
-
-.r_bottom {
-    height: 33%;
 }
 
 .right {
@@ -241,6 +249,16 @@ p {
     height: 30px;
     margin: auto;
     padding: 5px;
+}
+
+#add_ticket_db {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    cursor: default;
+}
+
+#print_tickets_db a:hover {
+    color: #950740;
 }
 
 #submit_container {
