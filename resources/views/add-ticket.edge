@@ -6,13 +6,16 @@
 @section('title')
     {{ show.Show_date }}
     @if(old('notification'))
-        <div class="alert alert-danger">
-            {{ old('notification') }}
-        </div>
+      <div class="alert alert-danger">
+         {{ old('notification') }}
+      </div>
     @endif
 @endsection
 
+
+
 @section('content')
+
     <div class="future_shows">
 
         <form action="{{ route('ShowController.insert_ticket') }}" method="POST">

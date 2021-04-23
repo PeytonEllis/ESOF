@@ -5,6 +5,11 @@
 
 @section('title')
     Add Shows
+    @if(old('notification'))
+        <div class="alert alert-success">
+            {{ old('notification') }}
+        </div>
+    @endif
 @endsection
 
 @section('content')

@@ -65,21 +65,24 @@ class ShowController {
   /*
   * Creates new show with validators.
   */
-  async create ({ request, response}) {
+  async create ({ request, response, session }) {
     //validate input
     const validation = await validate(request.all(), {
       Show_title: 'required',
       Show_date: 'required'
     })
     if(validation.fails()){
+      session.flash({ notification: 'Show failed to add' })
       return response.redirect('back')
     }
+
 
     const data = request.only(['Show_title', 'Show_date'])
     data.isPast = 0
 
     // save and get instance back
     const show = await Show.create(data)
+    session.flash({ notification: 'Show Added!' })
     return response.redirect('back')
   }
 
@@ -191,6 +194,7 @@ class ShowController {
       return response.redirect('back')
     }
 
+    session.flash({ notification: 'Ticket Added!'})
     await SeatingChart.create(data)
     return response.redirect('back')
   }
