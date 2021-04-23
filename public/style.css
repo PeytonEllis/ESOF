@@ -346,7 +346,7 @@ p {
 }
 
 #myBtn:hover {
-    cursor: default;
+    cursor: pointer;
 }
 
 #myImg {
