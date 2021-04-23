@@ -204,6 +204,14 @@ p {
     max-width: 700px;
 }
 
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
 .navbar {
     position: relative;
     text-align: center;
@@ -354,12 +362,13 @@ p {
     }
 }
 
-.modal-content,
-#caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
 }
 
 @-webkit-keyframes zoom {
@@ -368,14 +377,5 @@ p {
     }
     to {
         -webkit-transform: scale(1)
-    }
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
     }
 }
