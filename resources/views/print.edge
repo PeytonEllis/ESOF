@@ -10,18 +10,18 @@
 @section('content')
     <div class="picture">
         <h1>Displaying Seating Chart for {{ show.Show_date }}</h1>
-        <h1>{{ show.Show_title }}</h1>
+        <h1>Show Title: {{ show.Show_title }}</h1>
     </div>
     <div class="show_display">
         @each(seating_chart in seating_charts)
-            <div class="database_entry">
-                    Name: {{seating_chart.Name}}<br>
-                    Phone Number: {{seating_chart.Phone_Number}}<br>
-                    Seat_Type: {{seating_chart.Seat_type}}<br>
-                    Seat Reserved: {{seating_chart.Seats_rsv}}<br>
-                    <div class="links">
-                        <a href="/print-tickets/print/{{seating_chart.id}}" class = "btn">Print</a>
-                    </div>
+            <div class="database_entry" id="print_ticket_bg_color">
+                Name: {{seating_chart.Name}}<br>
+                Phone Number: {{seating_chart.Phone_Number}}<br>
+                Seat Type: {{seating_chart.Seat_type}}<br>
+                Seat Reserved: {{seating_chart.Seats_rsv}}<br>
+            </div>
+            <div class="links color2">
+                <a href="/print-tickets/print/{{seating_chart.id}}" class = "btn">Print This Ticket</a>
             </div>
         @endeach
     </div>

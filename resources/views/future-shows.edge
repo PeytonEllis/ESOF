@@ -10,27 +10,40 @@
 @section('content')
     <div class="show_display">
         @each(show in shows)
-          <div class="database_entry">
-            <div class="left">
-              <a href="/future-shows/{{show.id}}">
-                Name: {{show.Show_title}}<br>
-                Date: {{show.Show_date}}
-              <div class="links">
-                <a href="/future-shows/edit-show/{{show.id}}" class = "btn">Edit</a>
-                <a href="/future-shows/delete/{{show.id}}" class = "btn">Delete</a>
-                <a href="/print-tickets/{{show.id}}" class = "btn">Print</a>
-              </div>
+            <div class="database_entry">
+
+                <div class="left left_color">
+                    <div class="left_container">
+                        <a href="/future-shows/{{show.id}}">
+                            Name: {{show.Show_title}}<br>
+                            Date: {{show.Show_date}}
+                        </a>
+                        <div class="form_container">
+                            <form action=" {{ route('ShowController.isPast', { id: show.id}) }}" method="POST">
+                                {{ csrfField() }}
+                                <button type="submit">
+                                    Completed
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right" id="right_future_shows">
+                    <div class="custom_button color1">
+                        <a href="/future-shows/edit-show/{{show.id}}" class="button">Edit</a>
+                    </div>
+                    <div class="custom_button color2">
+                        <a href="/future-shows/delete/{{show.id}}" class="button">Delete</a>
+                    </div>
+                    <div class="custom_button color3">
+                        <a href="/print-tickets/{{show.id}}" class="button">Print</a>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
             </div>
-            <div class="right">
-              <form action=" {{ route('ShowController.isPast', { id: show.id}) }}" method="POST">
-                {{ csrfField() }}
-                <button type="submit">
-                  Completed
-                </button>
-              </form>
-            </div>
-            <div class="clear"></div>
-          </div>
         @endeach
     </div>
 @endsection

@@ -3,6 +3,7 @@
 const Show = use('App/Models/Show')
 const { validate } = use('Validator')
 var date
+var showToPrint
 
 class ShowController {
 
@@ -64,21 +65,24 @@ class ShowController {
   /*
   * Creates new show with validators.
   */
-  async create ({ request, response}) {
+  async create ({ request, response, session }) {
     //validate input
     const validation = await validate(request.all(), {
       Show_title: 'required',
       Show_date: 'required'
     })
     if(validation.fails()){
+      session.flash({ notification: 'Show failed to add' })
       return response.redirect('back')
     }
+
 
     const data = request.only(['Show_title', 'Show_date'])
     data.isPast = 0
 
     // save and get instance back
     const show = await Show.create(data)
+    session.flash({ notification: 'Show Added!' })
     return response.redirect('back')
   }
 
@@ -89,6 +93,15 @@ class ShowController {
     const show = await Show.find(params.id)
 
     show.isPast = 1
+
+    await show.save()
+    return response.redirect('back')
+  }
+
+  async oops ({params, response}){
+    const show = await Show.find(params.id)
+
+    show.isPast = 0
 
     await show.save()
     return response.redirect('back')
@@ -142,6 +155,7 @@ class ShowController {
   */
   async insert_ticket({request, response, session}) {
     const SeatingChart = use('App/Models/SeatingChart')
+
     const validation = await validate(request.all(), {
       Name: 'required',
       Phone_Number: 'required',
@@ -154,6 +168,33 @@ class ShowController {
 
     const data = await request.only(['Name', 'Phone_Number', 'Seat_type', 'Seats_rsv'])
     data.Show = date
+
+    const namesQuery = await Show
+      .query()
+      .select('Name', 'Seats_rsv')
+      .from('seating_charts')
+      .where('Show', date)
+      /*.whereExists(function() {
+      this.select('1').from('seating_charts').whereRaw('Show = ?', date).whereRaw('Name = ?', data.Name)
+    })*/
+      .fetch()
+
+    var names = namesQuery.toJSON()
+    console.log(names)
+    var flag = false
+    for (var i = 0; i < names.length; ++i) {
+      var name = names[i]
+      if(name.Name == data.Name || name.Seats_rsv == data.Seats_rsv) {
+        flag = true
+      }
+    }
+
+    if(flag) {
+      session.flash({ notification: 'Name has already been used OR seat has already been booked' })
+      return response.redirect('back')
+    }
+
+    session.flash({ notification: 'Ticket Added!'})
     await SeatingChart.create(data)
     return response.redirect('back')
   }
@@ -162,6 +203,7 @@ class ShowController {
   * displays all uncompleted shows on print-tickets page
   */
   async print_display( {view}) {
+
     const future = await Show
       .query()
       .select('id', 'Show_title', 'Show_date')
@@ -181,6 +223,9 @@ class ShowController {
     const show = await Show.find(params.id)
 
     date = show.Show_date
+    showToPrint = await Show.find(params.id)
+
+    console.log(showToPrint)
 
     const current_show = await Show
       .query()
@@ -192,6 +237,22 @@ class ShowController {
     return view.render('print', {
       show: show.toJSON(),
       seating_charts: current_show.toJSON()
+    })
+  }
+
+  /*
+* gets all information to be formatted for a given ticket
+*/
+  async ticket( {view, params}) {
+    const SeatingChart = use('App/Models/SeatingChart')
+    const ticket = await SeatingChart.find(params.id)
+
+    const current_show = showToPrint
+    console.log(current_show)
+
+    return view.render('print-page', {
+      seating_chart: ticket.toJSON(),
+      show: current_show.toJSON()
     })
   }
 }
