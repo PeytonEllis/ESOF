@@ -8,34 +8,30 @@
 @endsection
 
 @section('content')
-<div class="future_shows">
-    <form action="{{ route('SeatingChartController.update', { id: seating_chart.id}) }}" method="POST">
-        {{ csrfField() }}
+        <div class="future_shows color1">
+                <form action="{{ route('SeatingChartController.update', { id: seating_chart.id}) }}" method="POST" class="color3">
+                        {{ csrfField() }}
 
-        <div class="show_input">
-                <label for="Name">Name:</label>
-                <input type="text" name="Name" value="{{ seating_chart.Name }}">
+                        <div class="show_input">
+                                <label for="Name">Name:</label>
+                                <input type="text" name="Name" value="{{ seating_chart.Name }}">
+                        </div>
+                        <div class="show_input">
+                                <label for="Phone_Number">Phone Number:</label>
+                                <input type="text" name="Phone_Number" value="{{ seating_chart.Phone_Number }}">
+                        </div>
+                        <div class="show_input">
+                                <label for="Seat_type">Seat Type:</label>
+                                <input type="text" name="Seat_type" value="{{ seating_chart.Seat_type }}">
+                        </div>
+                        <div class="show_input">
+                                <label for="Seats_rsv">Seat Reserved:</label>
+                                <input type="text" name="Seats_rsv" value="{{ seating_chart.Seats_rsv }}">
+                        </div>
+                        <div id="submit_container">
+                        <button type="submit">Submit</button>
+                        </div>
+
+                </form>
         </div>
-
-        <div class="show_input">
-                <label for="Phone_Number">Phone Number:</label>
-                <input type="text" name="Phone_Number" value="{{ seating_chart.Phone_Number }}">
-        </div>
-
-        <div class="show_input">
-                <label for="Seat_type">Seat Type:</label>
-                <input type="text" name="Seat_type" value="{{ seating_chart.Seat_type }}">
-        </div>
-
-        <div class="show_input">
-                <label for="Seats_rsv">Seat Reserved:</label>
-                <input type="text" name="Seats_rsv" value="{{ seating_chart.Seats_rsv }}">
-        </div>
-
-        <div id="submit_container">
-            <button type="submit">Submit</button>
-        </div>
-
-    </form>
-</div>
 @endsection
