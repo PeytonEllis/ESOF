@@ -175,6 +175,20 @@ p {
     color: #C3073F;
 }
 
+.links {
+    padding: 10px;
+    margin: auto;
+    width: 93%;
+}
+
+.links:hover {
+    cursor: pointer;
+}
+
+.links a {
+    display: block;
+}
+
 .logo {
     background: url("/vcplogo.jpg") no-repeat;
     width: 370px;
@@ -356,8 +370,18 @@ p {
     opacity: 0.7;
 }
 
+#print_tickets_db {
+    background-color: #7E685A;
+}
+
 #print_tickets_db a:hover {
     color: #950740;
+}
+
+#print_ticket_bg_color {
+    background-color: #7E685A;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #submit_container {

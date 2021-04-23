@@ -8,21 +8,23 @@
 @endsection
 
 @section('content')
-    <div class="future_shows">
+    <div class="future_shows color1">
         <form action="{{ route('ShowController.update', { id: show.id}) }}" method="POST">
             {{ csrfField() }}
 
-            <div class="show_input">
-                <label for="Show_title">Show Title:</label>
-                <input type="text" name="Show_title" value="{{ show.Show_title }}">
-            </div>
-            <div class="show_input">
-                <label for="Show_date">Show Date:</label>
-                <input type="text" name="Show_date" value="{{ show.Show_date }}">
-            </div>
+            <div id="show_input_container" class="color3">
+                <div class="show_input">
+                    <label for="Show_title">Show Title:</label>
+                    <input type="text" name="Show_title" value="{{ show.Show_title }}">
+                </div>
+                <div class="show_input">
+                    <label for="Show_date">Show Date:</label>
+                    <input type="text" name="Show_date" value="{{ show.Show_date }}">
+                </div>
 
-            <div id="submit_container">
-                <button type="submit">Submit</button>
+                <div id="submit_container" class="color3">
+                    <button type="submit">Submit</button>
+                </div>
             </div>
 
         </form>
