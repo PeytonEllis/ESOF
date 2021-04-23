@@ -13,9 +13,9 @@
 @endsection
 
 @section('content')
-    <div class="future_shows">
+    <div class="future_shows color1">
 
-        <form action="{{ route('ShowController.insert_ticket') }}" method="POST">
+        <form action="{{ route('ShowController.insert_ticket') }}" method="POST" class="color3">
             {{ csrfField() }}
 
             <div class="show_input">
@@ -48,16 +48,24 @@
 
     <div class="show_display">
         @each(seating_chart in seating_charts)
-            <div class="database_entry">
-                Name: {{seating_chart.Name}}<br>
-                Phone Number: {{seating_chart.Phone_Number}}<br>
-                Seat_Type: {{seating_chart.Seat_type}}<br>
-                Seat Reserved: {{seating_chart.Seats_rsv}}<br>
-                <div class="links">
-                    <a href="/add-ticket/edit-ticket/{{seating_chart.id}}" class = "btn">Edit</a>
-                    <a href="/add-ticket/delete/{{seating_chart.id}}" class = "btn">Delete</a>
+            <div class="1 left_color">
+                <div class="database_entry" id="add_ticket_db">
+                    Name: {{seating_chart.Name}}<br>
+                    Phone Number: {{seating_chart.Phone_Number}}<br>
+                    Seat_Type: {{seating_chart.Seat_type}}<br>
+                    Seat Reserved: {{seating_chart.Seats_rsv}}<br>
                 </div>
             </div>
+
+            <div class="2">
+                <div class="custom_button color1">
+                    <a href="/add-ticket/edit-ticket/{{seating_chart.id}}" class = "btn">Edit Ticket</a>
+                </div>
+                <div class="custom_button color2">
+                    <a href="/add-ticket/delete/{{seating_chart.id}}" class = "btn">Delete Ticket</a>
+                </div>
+            </div>
+
         @endeach
     </div>
 @endsection
